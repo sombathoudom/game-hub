@@ -4,7 +4,7 @@ function ColorModeSwitch() {
   return (
     <HStack>
         <Switch colorScheme='green' isChecked={colorMode === 'dark'} onChange={toggleColorMode}/>
-        <Text>ColorModeSwitch</Text>
+        <Text>{colorMode}</Text>
     </HStack>
   )
 }
