@@ -23,7 +23,7 @@ function GameGrid({gameQuery}:Props) {
                 md:2,
                 lg:3,
                 xl:4
-            }} padding={10} spacing={3}>
+            }} padding={10} spacing={6}>
                 {isLoading && skeletons.map((skeleton) => (
                 <GameCardContainer key={skeleton}>
                     <GameCardSkeleton key={skeleton} />
