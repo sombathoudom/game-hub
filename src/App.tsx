@@ -11,6 +11,7 @@ import SortSelected from './components/SortSelected'
 export interface GameQuery {
   genre: Genre | null;
   platform: Platform | null;
+  sortOrder: string;
 }
 function App() {
   //that is old style
@@ -40,7 +41,7 @@ function App() {
       <GridItem area={'main'}>
         <HStack paddingLeft={10} marginBottom={5} spacing={5}>
           <PlatformSelector selectedPlatform={gameQuery.platform} onSelectedPlatform={(platform) => setGameQuery({...gameQuery, platform})}/>
-          <SortSelected/>
+          <SortSelected sortOrder={gameQuery.sortOrder} onSelectedSort={(sortOrder) => setGameQuery({...gameQuery, sortOrder})}/>
         </HStack>
         <GameGrid gameQuery={gameQuery} />
       </GridItem>
