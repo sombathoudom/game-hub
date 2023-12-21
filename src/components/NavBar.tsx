@@ -3,12 +3,14 @@ import logo from '../assets/react.svg';
 import React from 'react'
 import ColorModeSwitch from './ColorModeSwitch';
 import SearhInput from './SearhInput';
-
-function NavBar() {
+interface Props {
+  onSearchInput: (searchText: string) => void
+}
+function NavBar({onSearchInput}: Props) {
   return (
     <HStack padding="10px">
         <Image src={logo} alt="Vercel Logo" boxSize="60px"  />
-        <SearhInput/>
+        <SearhInput onSearchInput={onSearchInput}/>
         <ColorModeSwitch/>
     </HStack>
   )
