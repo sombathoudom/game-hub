@@ -13,9 +13,6 @@ interface Props {
 function GameGrid({gameQuery}:Props) {
     const {data, error, isLoading} = useGames(gameQuery);
     const skeletons = [1,2,3,4,5,6,7,8,9,10,11,12];
-
-    
-    if(data.length == 0) return <Text textAlign={'center'} marginTop={5}>No data to display</Text>
     return (
         <>
             {error && <Text>{error}</Text>} 
