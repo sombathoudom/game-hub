@@ -8,7 +8,7 @@ function ExpandableText({children}: Props) {
     const [expended, setExpanded] = useState(false);
     const limit = 300;
     if(!children) return null;
-    if(children.length <=limit) 
+    if(children.length <= limit) 
         return <Text>{children}</Text>
     const summary = expended ? children : children.substring(0,limit).concat('...');
 
